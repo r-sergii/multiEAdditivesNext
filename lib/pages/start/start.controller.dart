@@ -54,7 +54,9 @@ class StartController extends GetxController {
         // // sleep(const Duration(seconds: 3));
         // isUser = await _iAuthsUser(configController);
         // // sleep(const Duration(seconds: 5));
-        // await controller.writeLoadApp();
+        await controller.writeLoadApp();
+
+        Get.offAllNamed(Routes.danger);
 
         // if (isUser) {
         //   Get.offAllNamed(Routes.danger);
@@ -71,7 +73,6 @@ class StartController extends GetxController {
         //     Get.offAllNamed(Routes.desktop);
         //   }
         // }
-
       } else {
         //alarm is not internet//no connect to host
 // no connection to host,

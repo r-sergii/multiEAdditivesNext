@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 import 'settings.models.dart';
 
 class SettingsController extends GetxController {
-  @override
-  void onInit() {
-    super.onInit();
-  }
+  // @override
+  // void onInit() {
+  //   super.onInit();
+  // }
 
   final RxInt _selectedValueTheme = 0.obs;
   int get selectedValueTheme {
