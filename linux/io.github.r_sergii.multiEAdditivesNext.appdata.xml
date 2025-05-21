@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+	<id>io.github.r_sergii.multiEAdditivesNext</id>
+	<metadata_license>CC0-1.0</metadata_license>
+	<project_license>GPL-3.0-or-later</project_license>
+
+    <name>multiEAdditivesNext</name>
+    <summary>Food Additives Handbook. Find out the “what” you eat by buying goods in markets.</summary>
+    <provides>
+        <binary>io.github.r_sergii.multiEAdditivesNext</binary>
+    </provides>
+    <developer_name>Serhii Rudchenko</developer_name>
+    <developer id="io.github.r-sergii">
+        <name>Serhii Rudchenko</name>
+    </developer>
+    <launchable type="desktop-id">io.github.r_sergii.multiEAdditivesNext.desktop</launchable>
+	
+    <description>
+        <p>Food Additives - is the common name of natural or synthetic chemicals that are added to foods to make them certain properties (improvement of taste and smell, increase the nutritional value, and prevent contamination, etc., etc.), which It is not used as stand-alone food. </p>
+        <p>Handbook of food additives. Just pay attention to what is written in the composition of the ingredients on the packaging of the products you buy. And look in the application *that* it is you"ll have ... And then you decide.</p>
+        <p>In one application:</p>
+        <ul>
+            <li>Instant information about each of the additive.</li>
+        </ul>
+        <p>The indispensable app for all curious users. It features a simple and intuitive interface.</p>
+	</description>
+
+    <screenshots>
+        <screenshot type="default">
+            <caption>EAdditives by danger</caption>
+            <image>http://multiapps.inf.ua/screenshots/meadditiveslite/flutter/meadditives_danger.png</image>
+        </screenshot>
+        <screenshot type="default">
+            <caption>EAdditives by find</caption>
+            <image>http://multiapps.inf.ua/screenshots/meadditiveslite/flutter/meadditives_find.png</image>
+        </screenshot>
+        <screenshot type="default">
+            <caption>EAdditives by groups</caption>
+            <image>http://multiapps.inf.ua/screenshots/meadditiveslite/flutter/meadditives_groups.png</image>
+        </screenshot>
+        <screenshot type="default">
+            <caption>EAdditives by origin</caption>
+            <image>http://multiapps.inf.ua/screenshots/meadditiveslite/flutter/meadditives_origin.png</image>
+        </screenshot>
+        <screenshot type="default">
+            <caption>EAdditives by vegans</caption>
+            <image>http://multiapps.inf.ua/screenshots/meadditiveslite/flutter/meadditives_vegans.png</image>
+        </screenshot>
+        <screenshot type="default">
+            <caption>EAdditives by classification</caption>
+            <image>http://multiapps.inf.ua/screenshots/meadditiveslite/flutter/meadditives_classification.png</image>
+        </screenshot>
+        <screenshot type="default">
+            <caption>Info about EAdditives</caption>
+            <image>http://multiapps.inf.ua/screenshots/meadditiveslite/flutter/meadditives_info.png</image>
+        </screenshot>
+    </screenshots>
+
+    <url type="homepage">https://r-serega.github.io/mapps/</url>
+    <url type="help">https://r-serega.github.io/mapps/</url>
+
+    <content_rating type="oars-1.1"/>
+
+    <releases>
+        <release version="0.1.0" date="2025-05-20">
+        <description translate="no">
+            <ul>
+                <li>Initial release</li>
+            </ul>
+        </description>
+        </release>
+    </releases>
+</component>

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=multiE Additives
+Comment=Food Additives Handbook. Find out the “what” you eat by buying goods in markets.
+Exec=multieadditivesnext
+Icon=${SNAP}/meta/gui/icon.svg
+Terminal=false
+Type=Application
+Categories=Utility;
+Keywords=Food;EAddditives;Health;
+StartupNotify=true
+X-Purism-FormFactor=Workstation;
