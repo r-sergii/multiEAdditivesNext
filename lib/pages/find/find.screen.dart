@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:numberpicker/numberpicker.dart';
 import '../../routes.dart';
 import '../../services/translator/translator.controller.dart';
-import '../../ui/ads_widget.dart';
 import '../eadditives/eadditives.controller.dart';
 import './../../ui/layouts/base.dart';
 import './find.controller.dart';
@@ -61,11 +60,6 @@ class FindPage extends GetView<FindController> {
               ]),
             ),
           ),
-          const Align(
-            alignment: Alignment.bottomCenter,
-            child: AdsWidget(),
-            // child: Text("Ads"),
-          ),
         ],
       );
     } else {
@@ -91,11 +85,6 @@ class FindPage extends GetView<FindController> {
                     ]),
               ]),
             ),
-          ),
-          const Align(
-            alignment: Alignment.bottomCenter,
-            child: AdsWidget(),
-            // child: Text("Ads"),
           ),
         ],
       );

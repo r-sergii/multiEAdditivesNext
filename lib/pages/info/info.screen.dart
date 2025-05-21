@@ -4,7 +4,6 @@ import 'package:get/get.dart';
 import 'package:visibility_detector/visibility_detector.dart';
 
 import '/pages/info/info.models.dart';
-import '../../ui/ads_widget.dart';
 import '../group/group.models.dart';
 import '/pages/group/group.screen.dart';
 import '/pages/vegans/vegans.screen.dart';
@@ -109,11 +108,6 @@ class InfoPage extends GetView<InfoController> {
                           ],
                         ),
                       ),
-                    ),
-                    const Align(
-                      alignment: Alignment.bottomCenter,
-                      child: AdsWidget(),
-                      // child: Text("Ads"),
                     ),
                   ],
                 ),

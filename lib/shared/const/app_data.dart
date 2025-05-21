@@ -37,7 +37,7 @@ class AppData {
   static const String version = 'Version $versionMajor.0.4';
   static const String packageVersion = '3.0.4';
   static const String flutterVersion = 'stable 3.3.2';
-  static const String copyright = 'Copyright ©2016 - 2024';
+  static const String copyright = 'Copyright ©2016 - 2025';
   static const String author = 'Sergej Rudchenko';
   static const String license = ''; //'BSD 3-Clause License';
   static const String sEULA =
@@ -91,7 +91,7 @@ class AppData {
     scheme: 'https',
     // host: 'snapcraft.io',
     host: 'flathub.org',
-    path: '',
+    path: 'apps/collection/developer/Serhii%20Rudchenko/1',
   );
   // The max dp width used for layout content on the screen in the available
   // body area. Wider content gets growing side padding, kind of like on most

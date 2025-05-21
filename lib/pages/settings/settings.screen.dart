@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-// import 'package:groovin_widgets/groovin_widgets.dart';
 import '/app_controller.dart';
 import '../../services/translator/translator.service.dart';
 import '../../services/translator/translator.controller.dart';
@@ -66,38 +65,39 @@ class SettingsPage extends GetView<SettingsController> {
                             ),
                             // style: TextStyle(color: Theme.of(context).colorScheme.colorText, fontSize: 20)),
                           ),
-                          // Theme(
-                          //   data: Theme.of(context).copyWith(
-                          //     canvasColor: Colors.grey.shade500,
-                          //   ),
-                          //   child: Obx(
-                          //     () => OutlineDropdownButton<int>(
-                          //       isExpanded: true,
-                          //       onChanged: (value) {
-                          //         controller.selectedValueTheme = value == null ? 0 : value.toInt();
-                          //         debugPrint(value);
-                          //       },
-                          //       hint: Text(translator.colorthemes),
-                          //       value: controller.selectedValueTheme,
-                          //       items: controller.listItemColorTheme.map((e) {
-                          //         return DropdownMenuItem(
-                          //           value: e.i,
-                          //           child: Row(
-                          //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          //             children: <Widget>[
-                          //               Card(
-                          //                 color: e.color,
-                          //                 child: const SizedBox(width: 24, height: 24),
-                          //               ),
-                          //               const SizedBox(width: 10),
-                          //               Text(e.title),
-                          //             ],
-                          //           ),
-                          //         );
-                          //       }).toList(),
-                          //     ),
-                          //   ),
-                          // ),
+                          Theme(
+                            data: Theme.of(context).copyWith(
+                              canvasColor: Colors.grey.shade500,
+                            ),
+                            child: Obx(
+                              // () => OutlineDropdownButton<int>(
+                              () => DropdownButton<int>(
+                                isExpanded: true,
+                                onChanged: (value) {
+                                  controller.selectedValueTheme = value == null ? 0 : value.toInt();
+                                  debugPrint(value.toString());
+                                },
+                                hint: Text(translator.colorthemes),
+                                value: controller.selectedValueTheme,
+                                items: controller.listItemColorTheme.map((e) {
+                                  return DropdownMenuItem(
+                                    value: e.i,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: <Widget>[
+                                        Card(
+                                          color: e.color,
+                                          child: const SizedBox(width: 24, height: 24),
+                                        ),
+                                        const SizedBox(width: 10),
+                                        Text(e.title),
+                                      ],
+                                    ),
+                                  );
+                                }).toList(),
+                              ),
+                            ),
+                          ),
                           Container(
                             alignment: Alignment.centerLeft,
                             child: Text(
@@ -105,37 +105,38 @@ class SettingsPage extends GetView<SettingsController> {
                               // style: headlineTextStyle,
                             ),
                           ),
-                          // Theme(
-                          //   data: Theme.of(context).copyWith(
-                          //     canvasColor: Colors.grey.shade500,
-                          //   ),
-                          //   child: Obx(
-                          //     () => OutlineDropdownButton<int>(
-                          //       isExpanded: true,
-                          //       hint: Text(translator.language),
-                          //       value: controller.selectedValueLang, //_value2,
-                          //       onChanged: (value) {
-                          //         controller.selectedValueLang = value == null ? 0 : value.toInt();
-                          //         debugPrint(value);
-                          //       },
-                          //       items: controller.listItemLanguage.map((e) {
-                          //         return DropdownMenuItem(
-                          //           value: e.i,
-                          //           child: Row(
-                          //             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          //             children: <Widget>[
-                          //               Text(e.short),
-                          //               const SizedBox(width: 10),
-                          //               Text(
-                          //                 e.title,
-                          //               ),
-                          //             ],
-                          //           ),
-                          //         );
-                          //       }).toList(),
-                          //     ),
-                          //   ),
-                          // ),
+                          Theme(
+                            data: Theme.of(context).copyWith(
+                              canvasColor: Colors.grey.shade500,
+                            ),
+                            child: Obx(
+                              // () => OutlineDropdownButton<int>(
+                              () => DropdownButton<int>(
+                                isExpanded: true,
+                                hint: Text(translator.language),
+                                value: controller.selectedValueLang, //_value2,
+                                onChanged: (value) {
+                                  controller.selectedValueLang = value == null ? 0 : value.toInt();
+                                  debugPrint(value.toString());
+                                },
+                                items: controller.listItemLanguage.map((e) {
+                                  return DropdownMenuItem(
+                                    value: e.i,
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: <Widget>[
+                                        Text(e.short),
+                                        const SizedBox(width: 10),
+                                        Text(
+                                          e.title,
+                                        ),
+                                      ],
+                                    ),
+                                  );
+                                }).toList(),
+                              ),
+                            ),
+                          ),
                           const SizedBox(
                             height: 50,
                           ),
@@ -184,7 +185,7 @@ class SettingsPage extends GetView<SettingsController> {
                                     //switch theme
                                     final appController = Get.find<AppController>();
                                     // if (isDark) {
-                                    if(controller.selectedValueTheme == 0) {
+                                    if (controller.selectedValueTheme == 0) {
                                       appController.onThemeModeChanged(ThemeMode.light);
                                     } else {
                                       appController.onThemeModeChanged(ThemeMode.dark);

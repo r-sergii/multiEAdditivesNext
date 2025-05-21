@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import '../../app.dart';
 import '../../shared/const/app_data.dart';
-import '../../ui/ads_widget.dart';
 import '../eadditives/eadditives.controller.dart';
 import '../eadditives/eadditives.widget.dart';
 import '../start/start.dialog.dart';
@@ -90,11 +89,6 @@ class DangerPage extends GetView<DangerController> {
                               crossAxisSpacing: 1.0,
                               children: _getListData(context),
                             ),
-                          ),
-                          const Align(
-                            alignment: Alignment.bottomCenter,
-                            child: AdsWidget(),
-                            // child: Text("Ads"),
                           ),
                         ],
                       )

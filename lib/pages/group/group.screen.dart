@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
-import '../../ui/ads_widget.dart';
 import '../eadditives/eadditives.controller.dart';
 import '../eadditives/eadditives.widget.dart';
 import './../../ui/layouts/base.dart';
@@ -55,11 +54,6 @@ class GroupPage extends GetView<GroupController> {
                             children: _getListData(context),
                           ),
                           ),
-                      const Align(
-                        alignment: Alignment.bottomCenter,
-                        child: AdsWidget(),
-                        // child: Text("Ads"),
-                      ),
                     ],
                   )
                 : const Center(child: CircularProgressIndicator());
