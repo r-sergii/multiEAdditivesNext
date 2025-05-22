@@ -43,14 +43,14 @@ class StartPage extends GetView<StartController> {
                 // Icon(CupertinoIcons.cube_box, size: 80, color: Theme.of(context).secondaryHeaderColor),
                 // Obx(() => Icon(CupertinoIcons.circle,//.cloud, //Icons.cloud_circle_outlined,
                 // Obx(() => Icon(Icons.cloud_circle_outlined,
-                Obx(() =>
-                    AIcon.cloudInCircle(size: 80, color: controller.isBackend ? Colors.greenAccent : Colors.redAccent)),
-                // Icon(Icons.person_outline, size: 80, color: Theme.of(context).secondaryHeaderColor),
-                // Icon(Icons.account_circle_outlined, size: 80, color: Theme.of(context).secondaryHeaderColor),
-                // Obx(() => Icon(Icons.person, //CupertinoIcons.person_circle,
-                Obx(() => Icon(CupertinoIcons.person_circle,
-                    size: 80, color: controller.isUser ? Colors.greenAccent : Colors.redAccent)),
-                // const HtmlElementView(viewType: 'http://multiapps.inf.ua/icons/calendar_lite.png'),
+                // Obx(() =>
+                //     AIcon.cloudInCircle(size: 80, color: controller.isBackend ? Colors.greenAccent : Colors.redAccent)),
+                // // Icon(Icons.person_outline, size: 80, color: Theme.of(context).secondaryHeaderColor),
+                // // Icon(Icons.account_circle_outlined, size: 80, color: Theme.of(context).secondaryHeaderColor),
+                // // Obx(() => Icon(Icons.person, //CupertinoIcons.person_circle,
+                // Obx(() => Icon(CupertinoIcons.person_circle,
+                //     size: 80, color: controller.isUser ? Colors.greenAccent : Colors.redAccent)),
+                // // const HtmlElementView(viewType: 'http://multiapps.inf.ua/icons/calendar_lite.png'),
               ],
             )
           ],
