@@ -1,5 +1,5 @@
 [Desktop Entry]
-Version=3.0.4
+Version=0.1.0
 Type=Application
 
 Name=multiE Additives
@@ -11,6 +11,6 @@ Exec=multieadditivesnext
 Terminal=false
 StartupWMClass=multieadditivesnext
 
-Keywords=Food;EAddditives;Health;
+Keywords=Food;EAdditives;Health;
 StartupNotify=true
 X-Purism-FormFactor=Workstation;
