@@ -73,7 +73,7 @@ class AppsLoadController extends GetxController {
     debugPrint(loadModel.device.toString());
     debugPrint(loadModel.locale.toString());
     debugPrint(loadModel.datetime.toString());
-    // await AppsLoadProvider().insertItem(loadModel);
+    await AppsLoadProvider().insertItem(loadModel);
   }
 
   // Future<void> writeWindowsLoadApp() async {
