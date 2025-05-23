@@ -1,62 +1,35 @@
-# yaml-language-server: $schema=https://raw.githubusercontent.com/flatpak/flatpak-builder/master/data/flatpak-manifest.schema.json
+# yaml-language-server: $schema=https://raw.githubusercontent.com/flatpak/flatpak-builder/main/data/flatpak-manifest.schema.json
+
+---
 app-id: io.github.r_sergii.multiEAdditivesNext
 runtime: org.freedesktop.Platform
-runtime-version: '24.08'
+runtime-version: "22.08"
 sdk: org.freedesktop.Sdk
 command: multieadditivesnext
 separate-locales: false
 finish-args:
+  - --share=ipc
   - --socket=fallback-x11
   - --socket=wayland
-  - --share=network
-  - --share=ipc
   - --device=dri
-cleanup:
-  - /git_repo
-  - /io.github.r_sergii.multiEAdditivesNext.desktop
+  - --socket=pulseaudio
+  - --share=network
 modules:
-  - name: multieadditivesnext
+  # multiEAdditivesNext
+  - name: multiEAdditivesNext
     buildsystem: simple
+    only-arches:
+      - x86_64
     build-commands:
-      - cp -r multiEAdditivesNext /app/
-      - chmod +x /app/multiEAdditivesNext/multieadditivesnext
-      - mkdir -p /app/bin
-      - ln -s /app/multiEAdditivesNext/multieadditivesnext /app/bin/multieadditivesnext
-      - mv git_repo/snap/gui/multieadditivesnext.desktop ${FLATPAK_ID}.desktop
-      - desktop-file-edit ${FLATPAK_ID}.desktop --set-icon=${FLATPAK_ID}
-      - install -Dm644 -t "${FLATPAK_DEST}/share/applications/" ${FLATPAK_ID}.desktop
-      - install -Dm644 git_repo/snap/gui/icon.png "${FLATPAK_DEST}/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.png"
-      - install -Dm644 git_repo/linux/${FLATPAK_ID}.appdata.xml /app/share/appdata/${FLATPAK_ID}.appdata.xml
+      - "./build-flatpak.sh"
     sources:
-      - type: archive
-        only-arches: [x86_64]
-        dest: multiEAdditivesNext
-        url: https://github.com/r-sergii/multiEAdditivesNext/releases/download/v4.3.1/multieadditivesnext-linux-x86_64.tar.gz
-        sha256: 2b2153505ea3ef94fdfe7d9c8ce688c56f8e534803dfe35d5a733eba86a059ce
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/r-sergii/multiEAdditivesNext/releases/latest
-          tag-query: .tag_name
-          timestamp-query: .published_at
-          version-query: $tag | sub("^[vV]"; "")
-          url-query: '"https://github.com/r-sergii/multiEAdditivesNext/releases/download/\($tag)/multieadditivesnext-linux-x86_64.tar.gz"'
-      - type: archive
-        only-arches: [aarch64]
-        dest: multiEAdditivesNext
-        url: https://github.com/r-sergii/multiEAdditivesNext/releases/download/v4.3.1/multieadditivesnext-linux-aarch64.tar.gz
-        sha256: 73d3a87c35763977ffde341d15c04e66590d1a5e332ff3bac77a73bd8ca0ece7
-        x-checker-data:
-          type: json
-          url: https://api.github.com/repos/r-sergii/multiEAdditivesNext/releases/latest
-          tag-query: .tag_name
-          timestamp-query: .published_at
-          version-query: $tag | sub("^[vV]"; "")
-          url-query: '"https://github.com/r-sergii/multiEAdditivesNext/releases/download/\($tag)/multieadditivesnext-linux-aarch64.tar.gz"'
-      - type: git
-        dest: git_repo
-        url: https://github.com/r-sergii/multiEAdditivesNext
-        tag: v4.3.1
-        commit: 85af86690deab8ea18aa3be97169be6ddf7b2775
-        x-checker-data:
-          type: git
-          tag-pattern": ^v([0-9.]+)$
+      - type: file
+        url: https://github.com/r-sergii/multiEAdditivesNext/releases/download/0.0.4/multiEAdditivesNext.tar.gz
+        sha256: ac04ef86b39f08f958f41e8c82b66249cfe0ea6f0fa2e624b0b2be647dfaa94f
+      - type: dir
+        path: ../multieadditivesnext
+      # - type: git
+      #   url: https://github.com/r-sergii/multiEAdditivesNext.git
+      #   branch: main
+      - type: file
+        path: build-flatpak.sh
